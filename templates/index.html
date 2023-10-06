@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        color: skyblue;
+    }
+
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+<h1>Advance Calculator</h1>
+<img src="{{url_for('static', filename='img.png') }}" width="250" height="300">
+<br>
+<form method="POST" action="/op">
+    <select name="operations">
+        <option value="">Choose Operation</option>
+        <option value="simplify">Simplify</option>
+        <option value="factor">Factor</option>
+    </select>
+    <input placeholder="expression" name="text">
+    <input type="submit">
+    <p>Your equation is {{equation}} = {{ result }}</p >
+</form>
+</body>
+</html>
